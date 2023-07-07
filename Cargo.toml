@@ -1,0 +1,16 @@
+[package]
+name = "h"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+debug = true
+panic = "abort"
+
+[dependencies]
+jemallocator = "0.5"
+jemalloc-ctl = { version = "0.5", features = ["default"] }
+jemalloc-sys = { version = "0.5.3", features = ["default", "profiling", "stats"]}
+
+# tikv-jemalloc-ctl = { version = "0.5", features = ["use_std"] }
+# tikv-jemallocator = "0.5"
